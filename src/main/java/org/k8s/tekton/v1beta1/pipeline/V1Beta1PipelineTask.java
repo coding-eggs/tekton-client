@@ -82,7 +82,7 @@ public class V1Beta1PipelineTask {
         private List<V1Beta1Sidecar> sidecars;
 
         @ApiModelProperty(value = "该任务的所有workspace 声明" ,position = 8)
-        private List<V1Beta1WorkSpaceDeclaration> workspaces;
+        private List<V1Beta1WorkspaceDeclaration> workspaces;
 
         @ApiModelProperty(value = "step 结果输出", notes = "结果是此任务可以输出的值" ,position = 9)
         private List<V1Beta1TaskResult> results;

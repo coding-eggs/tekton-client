@@ -1,4 +1,4 @@
-package org.k8s.tekton.v1beta1;
+package org.k8s.tekton.v1;
 
 
 import io.swagger.annotations.ApiModelProperty;
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1WorkSpaceDeclaration {
+public class V1WorkspaceDeclaration {
 
     @ApiModelProperty(value = "workspace 声明 name" ,position = 1)
     private String name;
