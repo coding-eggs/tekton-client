@@ -43,7 +43,7 @@ public class V1Beta1PipelineTask {
     @ApiModelProperty(value = "声明任务展开的参数", position = 7)
     private List<V1Beta1RunParam<?>> matrix;
 
-    @ApiModelProperty(value = "WorkspacePipelineTaskBinding 描述了传递到管道的workspace应如何映射到任务声明的workspace。")
+    @ApiModelProperty(value = "WorkspacePipelineTaskBinding 描述了传递到管道的workspace应如何映射到任务声明的workspace。", position = 8)
     private List<WorkspacePipelineTaskBinding> workspaces;
 
     @ApiModelProperty(value = "超时时间" ,position = 9)

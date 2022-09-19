@@ -23,7 +23,7 @@ public class V1Beta1PipelineResourceSpec {
     @ApiModelProperty(value = "声明一个字符串参数，用于pipelineResources上下文中", position = 2)
     private List<ResourceParam> params;
 
-    @ApiModelProperty(value = "要获取secrets以填充某些资源字段")
+    @ApiModelProperty(value = "要获取secrets以填充某些资源字段", position = 3)
     private List<SecretParam> secrets;
 
 

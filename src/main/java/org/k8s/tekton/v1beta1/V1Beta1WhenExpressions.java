@@ -14,13 +14,13 @@ import lombok.NoArgsConstructor;
 public class V1Beta1WhenExpressions<T> {
 
 
-    @ApiModelProperty(value = "input", notes = "input is the input for the expression which can be static inputs or variables (Parameters or Results). If the is not provided, it defaults to an empty string")
+    @ApiModelProperty(value = "input", notes = "input 是表达式的输入，可以是静态输入或变量（参数或结果）。如果未提供，则默认为空字符串", position = 0)
     private String input;
 
-    @ApiModelProperty(value = "操作符",notes = "in , notin")
+    @ApiModelProperty(value = "操作符",notes = "in , notin", position = 1)
     private String operator;
 
-    @ApiModelProperty(value = "value", notes = "string or array ")
+    @ApiModelProperty(value = "value", notes = "string or array ", position = 2)
     private T values;
 
 

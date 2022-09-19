@@ -22,7 +22,7 @@ public class V1Beta1PipelineResourceResult {
     @ApiModelProperty(value = "resourceName", position = 2)
     private String resourceName;
 
-    @ApiModelProperty(value = "ResultType 用于确定 PipelineResourceResult 是否来自 task 结果 请注意，ResultType 是另一种类型，用于定义我们用于 Results 的数据类型（例如字符串、数组等")
+    @ApiModelProperty(value = "ResultType 用于确定 PipelineResourceResult 是否来自 task 结果 请注意，ResultType 是另一种类型，用于定义我们用于 Results 的数据类型（例如字符串、数组等）", position = 3)
     private Integer type;
 
 }
