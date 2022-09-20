@@ -6,7 +6,8 @@
 
     <groupId>org.k8s</groupId>
     <artifactId>tekton-client</artifactId>
-    <version>1.0</version>
+    <version>0.40.0</version>
+    <description>tekton version 0.40.0</description>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
