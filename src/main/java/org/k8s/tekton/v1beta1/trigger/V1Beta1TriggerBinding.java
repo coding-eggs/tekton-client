@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1EventListener {
+public class V1Beta1TriggerBinding {
 
     @ApiModelProperty(value = "apiVersion", position = 0)
     private String apiVersion;
@@ -23,7 +23,7 @@ public class V1Beta1EventListener {
     private V1ObjectMeta metadata;
 
     @ApiModelProperty(value = "spec", position = 3)
-    private V1Beta1EventListenerSpec spec;
+    private V1Beta1TriggerBindingSpec spec;
 
     @ApiModelProperty(value = "status", position = 4)
     private Object status;
