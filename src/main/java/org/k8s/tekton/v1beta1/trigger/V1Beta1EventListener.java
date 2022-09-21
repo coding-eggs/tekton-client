@@ -1,5 +1,6 @@
 package org.k8s.tekton.v1beta1.trigger;
 
+import com.google.gson.JsonObject;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -24,5 +25,8 @@ public class V1Beta1EventListener {
 
     @ApiModelProperty(value = "spec", position = 3)
     private V1Beta1EventListenerSpec spec;
+
+    @ApiModelProperty(value = "status", position = 4)
+    private Object status;
 
 }

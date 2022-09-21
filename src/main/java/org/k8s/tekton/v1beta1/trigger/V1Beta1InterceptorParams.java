@@ -6,15 +6,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1NamespaceSelector {
+public class V1Beta1InterceptorParams {
 
-    @ApiModelProperty(value = "namespace list name")
-    private List<String> matchNames;
+    @ApiModelProperty(value = "name", position = 0)
+    private String name;
+
+    @ApiModelProperty(value = "value", position = 1)
+    private Object value;
 
 }
