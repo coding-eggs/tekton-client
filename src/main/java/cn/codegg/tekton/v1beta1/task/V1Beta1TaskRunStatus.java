@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1beta1.task;
 
 import cn.codegg.tekton.v1beta1.V1Beta1SidecarState;
+import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
 import cn.codegg.tekton.v1beta1.pipeline.V1Beta1PipelineResourceResult;
 import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
@@ -20,35 +21,37 @@ import java.util.List;
 @Data
 public class V1Beta1TaskRunStatus {
 
+    @ApiModelProperty(value = "task run 变更状态", position = 0)
+    private List<V1Beta1StatusCondition> conditions;
 
-    @ApiModelProperty(value = "pod 名称", position = 0)
+    @ApiModelProperty(value = "pod 名称", position = 1)
     private String podName;
 
-    @ApiModelProperty(value = "task 实际启动时间", position = 1)
+    @ApiModelProperty(value = "task 实际启动时间", position = 2)
     private OffsetDateTime startTime;
 
-    @ApiModelProperty(value = "task 结束时间",position = 2)
+    @ApiModelProperty(value = "task 结束时间",position = 3)
     private OffsetDateTime completionTime;
 
-    @ApiModelProperty(value = "task step 状态列表",position = 3)
+    @ApiModelProperty(value = "task step 状态列表",position = 4)
     private List<StepState> steps;
 
-    @ApiModelProperty(value = "描述通过 CloudEventResource 请求的每个云事件的状态")
+    @ApiModelProperty(value = "描述通过 CloudEventResource 请求的每个云事件的状态", position = 5)
     private List<V1Beta1CloudEventDelivery> cloudEvents;
 
-    @ApiModelProperty(value = "task run 的历史记录", position = 5)
+    @ApiModelProperty(value = "task run 的历史记录", position = 6)
     private List<V1Beta1TaskRunStatus> retriesStatus;
 
-    @ApiModelProperty(value = "在 taskRun 期间构建的 Resources 的结果。目前包括构建容器镜像的摘要", position = 6)
+    @ApiModelProperty(value = "在 taskRun 期间构建的 Resources 的结果。目前包括构建容器镜像的摘要", position = 7)
     private List<V1Beta1PipelineResourceResult> resourceResult;
 
-    @ApiModelProperty(value = "task container 输出的结果列表", position = 6)
+    @ApiModelProperty(value = "task container 输出的结果列表", position = 8)
     private List<V1Beta1TaskRunResult<?>> taskRunResults;
 
-    @ApiModelProperty(value = "sidecar 的状态记录", position = 7)
+    @ApiModelProperty(value = "sidecar 的状态记录", position = 9)
     private List<V1Beta1SidecarState> sidecars;
 
-    @ApiModelProperty(value = "taskrun 中 task 的 spec", position = 8)
+    @ApiModelProperty(value = "taskrun 中 task 的 spec", position = 10)
     private V1Beta1TaskSpec taskSpec;
 
 
@@ -81,30 +84,6 @@ public class V1Beta1TaskRunStatus {
 
         @ApiModelProperty(value = "镜像id", position = 5)
         private String imageID;
-
-    }
-
-
-    @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @Data
-    public static class TaskRunStatusCondition {
-
-        @ApiModelProperty(value = "最后变更时间",position = 0)
-        private String lastTransitionTime;
-
-        @ApiModelProperty(value = "变更信息", position = 1)
-        private String message;
-
-        @ApiModelProperty(value = "原因: Started / Pending / Running / TaskRunCalled / Succeeded / Failed / [Error message] / TaskRunTimeout / TaskRunImagePullFailed" ,position = 2)
-        private String reason;
-
-        @ApiModelProperty(value = "状态：Unknown / True / False ", position = 3)
-        private String status;
-
-        @ApiModelProperty(value = "类型",example = "Succeeded",position = 4)
-        private String type;
 
     }
 

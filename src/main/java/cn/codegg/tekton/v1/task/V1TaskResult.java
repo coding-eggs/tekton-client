@@ -21,7 +21,7 @@ public class V1TaskResult {
     private String  type;
 
     @ApiModelProperty(value = "Properties 是支持键值对结果的 JSON Schema 属性" ,position = 2)
-    private Map<String,Object> properties;
+    private Map<String,String> properties;
 
     @ApiModelProperty(value = "result 描述" ,position = 3)
     private String description;

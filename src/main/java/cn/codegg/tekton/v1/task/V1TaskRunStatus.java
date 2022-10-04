@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1.task;
 
+import cn.codegg.tekton.v1.V1StatusCondition;
 import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
 import io.kubernetes.client.openapi.models.V1ContainerStateWaiting;
@@ -19,17 +20,19 @@ import java.util.List;
 @Data
 public class V1TaskRunStatus {
 
+    @ApiModelProperty(value = "task 变更状态", position = 0)
+    private List<V1StatusCondition> conditions;
 
-    @ApiModelProperty(value = "pod 名称", position = 0)
+    @ApiModelProperty(value = "pod 名称", position = 1)
     private String podName;
 
-    @ApiModelProperty(value = "task 实际启动时间", position = 1)
+    @ApiModelProperty(value = "task 实际启动时间", position = 2)
     private OffsetDateTime startTime;
 
-    @ApiModelProperty(value = "task 结束时间",position = 2)
+    @ApiModelProperty(value = "task 结束时间",position = 3)
     private OffsetDateTime completionTime;
 
-    @ApiModelProperty(value = "task step 状态列表",position = 3)
+    @ApiModelProperty(value = "task step 状态列表",position = 4)
     private List<StepState> steps;
 
     @ApiModelProperty(value = "task run 的历史记录", position = 5)
@@ -77,28 +80,5 @@ public class V1TaskRunStatus {
 
     }
 
-
-    @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @Data
-    public static class TaskRunStatusCondition {
-
-        @ApiModelProperty(value = "最后变更时间",position = 0)
-        private String lastTransitionTime;
-
-        @ApiModelProperty(value = "变更信息", position = 1)
-        private String message;
-
-        @ApiModelProperty(value = "原因: Started / Pending / Running / TaskRunCalled / Succeeded / Failed / [Error message] / TaskRunTimeout / TaskRunImagePullFailed" ,position = 2)
-        private String reason;
-
-        @ApiModelProperty(value = "状态：Unknown / True / False ", position = 3)
-        private String status;
-
-        @ApiModelProperty(value = "类型",example = "Succeeded",position = 4)
-        private String type;
-
-    }
 
 }

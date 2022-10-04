@@ -31,6 +31,6 @@ public class V1Beta1ParamSpec<T> {
     private T defaultValue;
 
     @ApiModelProperty(value = "参数类型描述 JSON Schema 属性" ,position = 4)
-    private Map<String,Object> properties;
+    private Map<String,String> properties;
 
 }
