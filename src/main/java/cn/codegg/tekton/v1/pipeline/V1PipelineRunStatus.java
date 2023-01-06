@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1.pipeline;
 
 
+import cn.codegg.tekton.v1.V1Condition;
 import cn.codegg.tekton.v1beta1.V1Beta1WhenExpressions;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -24,19 +25,22 @@ public class V1PipelineRunStatus {
     @ApiModelProperty(value = "pipeline run 完成时间", position = 1)
     private OffsetDateTime completionTime;
 
-    @ApiModelProperty(value = "由 pipeline task的容器写出的结果列表", position = 2)
+    @ApiModelProperty(value = "pipeline run 状态", position = 2)
+    private List<V1Condition> conditions;
+
+    @ApiModelProperty(value = "由 pipeline task的容器写出的结果列表", position = 3)
     private List<V1PipelineRunResult<?>> results;
 
-    @ApiModelProperty(value = "PipelineRunSpec 包含用于实例化运行的确切规范",position = 3)
+    @ApiModelProperty(value = "PipelineRunSpec 包含用于实例化运行的确切规范",position = 4)
     private List<V1PipelineSpec> pipelineSpec;
 
-    @ApiModelProperty(value = "用于描述由于当 When Expressions 结果为 False 而被跳过的 task", position = 4)
+    @ApiModelProperty(value = "用于描述由于当 When Expressions 结果为 False 而被跳过的 task", position = 6)
     private List<SkippedTask> skippedTasks;
 
-    @ApiModelProperty(value = "用于指向此 PipelineRun 中各个 TaskRuns 和 Runs 的状态",position = 5)
+    @ApiModelProperty(value = "用于指向此 PipelineRun 中各个 TaskRuns 和 Runs 的状态",position = 6)
     private List<ChildStatusReference> childReferences;
 
-    @ApiModelProperty(value = "finally task 启动时间", position = 6)
+    @ApiModelProperty(value = "finally task 启动时间", position = 7)
     private OffsetDateTime finallyStartTime;
 
 
