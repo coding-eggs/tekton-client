@@ -1,7 +1,7 @@
 package cn.codegg.tekton.v1beta1.task;
 
-import cn.codegg.tekton.v1beta1.V1Beta1Condition;
 import cn.codegg.tekton.v1beta1.V1Beta1SidecarState;
+import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
 import cn.codegg.tekton.v1beta1.pipeline.V1Beta1PipelineResourceResult;
 import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
@@ -21,18 +21,17 @@ import java.util.List;
 @Data
 public class V1Beta1TaskRunStatus {
 
+    @ApiModelProperty(value = "task run 变更状态", position = 0)
+    private List<V1Beta1StatusCondition> conditions;
 
-    @ApiModelProperty(value = "pod 名称", position = 0)
+    @ApiModelProperty(value = "pod 名称", position = 1)
     private String podName;
 
-    @ApiModelProperty(value = "task 实际启动时间", position = 1)
+    @ApiModelProperty(value = "task 实际启动时间", position = 2)
     private OffsetDateTime startTime;
 
-    @ApiModelProperty(value = "task 结束时间",position = 2)
+    @ApiModelProperty(value = "task 结束时间",position = 3)
     private OffsetDateTime completionTime;
-
-    @ApiModelProperty(value = "taskrun 状态" , position = 3)
-    private List<V1Beta1Condition> conditions;
 
     @ApiModelProperty(value = "task step 状态列表",position = 4)
     private List<StepState> steps;
@@ -87,6 +86,5 @@ public class V1Beta1TaskRunStatus {
         private String imageID;
 
     }
-
 
 }
