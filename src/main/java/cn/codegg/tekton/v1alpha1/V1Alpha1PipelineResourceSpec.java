@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1PipelineResourceSpec {
+public class V1Alpha1PipelineResourceSpec {
 
 
     @ApiModelProperty(value = "description", position = 0)
@@ -22,10 +22,10 @@ public class V1alpha1PipelineResourceSpec {
     private String type;
 
     @ApiModelProperty(value = "params", position = 2)
-    private List<V1alpha1ResourceParam> params;
+    private List<V1Alpha1ResourceParam> params;
 
     @ApiModelProperty(value = "secrets", position = 3)
-    private List<V1alpha1SecretParam> secrets;
+    private List<V1Alpha1SecretParam> secrets;
 
 
 }

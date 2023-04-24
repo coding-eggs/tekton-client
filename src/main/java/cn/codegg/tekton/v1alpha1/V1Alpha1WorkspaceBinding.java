@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1WorkspaceBinding {
+public class V1Alpha1WorkspaceBinding {
 
 
     @ApiModelProperty(value = "name", position = 0)

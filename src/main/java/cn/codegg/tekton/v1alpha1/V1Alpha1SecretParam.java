@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1SecretParam {
+public class V1Alpha1SecretParam {
 
     @ApiModelProperty(value = "字段名称", position = 0)
     private String fieldName;

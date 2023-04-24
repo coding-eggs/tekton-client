@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1RunStatus {
+public class V1Alpha1RunStatus {
 
 
     @ApiModelProperty(value = "run 实际启动时间", position = 1)
@@ -23,10 +23,10 @@ public class V1alpha1RunStatus {
     private OffsetDateTime completionTime;
 
     @ApiModelProperty(value = "run container 输出的结果列表", position = 3)
-    private List<V1alpha1RunResult<?>> results;
+    private List<V1Alpha1RunResult<?>> results;
 
     @ApiModelProperty(value = "run 的历史记录", position = 4)
-    private List<V1alpha1RunStatus> retriesStatus;
+    private List<V1Alpha1RunStatus> retriesStatus;
 
     @ApiModelProperty(value = "extraFields", position = 5)
     private Object extraFields;

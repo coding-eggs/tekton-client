@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1Run {
+public class V1Alpha1Run {
 
     @ApiModelProperty(value = "apiVersion", notes = "tekton.dev/v1alpha1", example = "tekton.dev/v1alpha1",position = 0)
     private String apiVersion;
@@ -24,10 +24,10 @@ public class V1alpha1Run {
     private V1ObjectMeta metadata;
 
     @ApiModelProperty(value = "spec", position = 3)
-    private V1alpha1RunSpec spec;
+    private V1Alpha1RunSpec spec;
 
     @ApiModelProperty(value = "status", position = 4)
-    private V1alpha1RunStatus status;
+    private V1Alpha1RunStatus status;
 
 
 }

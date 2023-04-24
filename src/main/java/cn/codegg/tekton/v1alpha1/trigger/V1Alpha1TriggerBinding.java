@@ -1,5 +1,4 @@
-package cn.codegg.tekton.v1alpha1;
-
+package cn.codegg.tekton.v1alpha1.trigger;
 
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,19 +11,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1PipelineResource {
+public class V1Alpha1TriggerBinding {
 
-
-    @ApiModelProperty(value = "apiVersion", example = "V1alpha1PipelineResourceSpec", position = 0)
+    @ApiModelProperty(value = "apiVersion", position = 0)
     private String apiVersion;
 
-    @ApiModelProperty(value = "kind", example = "PipelineResource", position = 1)
+    @ApiModelProperty(value = "kind", position = 1)
     private String kind;
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;
 
     @ApiModelProperty(value = "spec", position = 3)
-    private V1alpha1PipelineResourceSpec spec;
+    private V1Alpha1TriggerBindingSpec spec;
+
+    @ApiModelProperty(value = "status", position = 4)
+    private Object status;
 
 }

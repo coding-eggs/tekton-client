@@ -12,13 +12,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1ResolverRef {
+public class V1Alpha1ResolverRef {
 
     @ApiModelProperty(value = "resolverName", position = 0)
     private String resolverName;
 
     @ApiModelProperty(value = "远程pipeline参数", position = 1)
-    private List<V1alpha1RunParam<?>> params;
+    private List<V1Alpha1RunParam<?>> params;
 
 
 }

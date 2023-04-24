@@ -13,7 +13,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1PipelineTaskMetadata {
+public class V1Alpha1PipelineTaskMetadata {
 
     @ApiModelProperty(value = "task 标签", position = 0)
     private Map<String, String> labels;

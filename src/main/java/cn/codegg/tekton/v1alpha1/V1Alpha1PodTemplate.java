@@ -15,7 +15,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1PodTemplate {
+public class V1Alpha1PodTemplate {
 
     @ApiModelProperty(value = "node 选择器", position = 0)
     private Map<String, String> nodeSelector;

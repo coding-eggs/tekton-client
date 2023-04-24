@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1alpha1EmbeddedRunSpec {
+public class V1Alpha1ResourceParam {
 
-    @ApiModelProperty(value = "metadata", position = 0)
-    private V1alpha1PipelineTaskMetadata metadata;
+    @ApiModelProperty(value = "name", position = 0)
+    private String name;
 
-    @ApiModelProperty(value = "spec", position = 1)
-    private Object spec;
+    @ApiModelProperty(value = "value", position = 1)
+    private String value;
 
 }
