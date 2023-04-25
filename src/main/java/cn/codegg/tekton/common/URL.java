@@ -26,9 +26,9 @@ public class URL {
     @ApiModelProperty(value = "u.Path 的转义形式", position = 5)
     private String RawPath;
     @ApiModelProperty(value = "不发出空主机", position = 6)
-    private Boolean OmitHost;
+    private boolean OmitHost;
     @ApiModelProperty(value = "即使 RawQuery 为空，也追加一个查询 ('?')", position = 7)
-    private Boolean ForceQuery;
+    private boolean ForceQuery;
     @ApiModelProperty(value = "加密查询值，不带？", position = 8)
     private String RawQuery;
     @ApiModelProperty(value = "参考片段，不带 #", position = 9)
@@ -50,7 +50,7 @@ public class URL {
         private String password;
 
         @ApiModelProperty(value = "passwordSet", position = 2)
-        private Boolean passwordSet;
+        private boolean passwordSet;
 
     }
 

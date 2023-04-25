@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1beta1.task;
 
+import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Builder
 @NoArgsConstructor
@@ -15,6 +17,14 @@ import java.util.List;
 @Data
 public class V1Beta1CustomRunStatus {
 
+    @ApiModelProperty(value = "observedGeneration", position = 0)
+    private long observedGeneration;
+
+    @ApiModelProperty(value = "conditions", position = 1)
+    private List<V1Beta1StatusCondition> conditions;
+
+    @ApiModelProperty(value = "annotations" , position = 1)
+    private Map<String, String> annotations;
 
     @ApiModelProperty(value = "task 实际启动时间", position = 1)
     private OffsetDateTime startTime;

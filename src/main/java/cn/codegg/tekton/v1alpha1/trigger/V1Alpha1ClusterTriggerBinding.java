@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 public class V1Alpha1ClusterTriggerBinding {
 
     @ApiModelProperty(value = "apiVersion", position = 0)
-    private String apiVersion;
+    private String apiVersion = "cel";
 
     @ApiModelProperty(value = "kind", position = 1)
-    private String kind;
+    private String kind = "ClusterTriggerBinding";
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

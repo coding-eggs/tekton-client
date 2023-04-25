@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,9 +16,9 @@ import lombok.NoArgsConstructor;
 public class V1Beta1TaskResources {
 
     @ApiModelProperty(value = "保存从 DeclaredPipelineResources 中声明的 PipelineResources 到 Task 所需的输入 PipelineResources 的映射", position = 0)
-    private V1Beta1ResourceDeclaration inputs;
+    private List<V1Beta1ResourceDeclaration> inputs;
 
     @ApiModelProperty(value = "保存从在 DeclaredPipelineResources 中声明的 PipelineResources 到 Task 所需的输入 PipelineResources 的映射",position = 1)
-    private V1Beta1ResourceDeclaration outputs;
+    private List<V1Beta1ResourceDeclaration> outputs;
 
 }

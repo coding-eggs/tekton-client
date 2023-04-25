@@ -1,7 +1,7 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
 
-import cn.codegg.tekton.v1beta1.V1Beta1PodTemplate;
+import cn.codegg.tekton.common.PodTemplate;
 import cn.codegg.tekton.v1beta1.V1Beta1ResolverRef;
 import cn.codegg.tekton.v1beta1.V1Beta1RunParam;
 import cn.codegg.tekton.v1beta1.V1Beta1WorkspaceBinding;
@@ -44,7 +44,7 @@ public class V1Beta1PipelineRunSpec {
     private Timeouts timeouts;
 
     @ApiModelProperty(value = "podTemplate",position = 7)
-    private V1Beta1PodTemplate podTemplate;
+    private PodTemplate podTemplate;
 
     @ApiModelProperty(value = "创建workspace实例", position = 8)
     private List<V1Beta1WorkspaceBinding> workspaces;

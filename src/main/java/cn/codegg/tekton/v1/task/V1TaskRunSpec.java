@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1.task;
 
+import cn.codegg.tekton.common.PodTemplate;
 import io.kubernetes.client.openapi.models.V1ResourceRequirements;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -7,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import cn.codegg.tekton.v1.V1Override;
-import cn.codegg.tekton.v1.V1PodTemplate;
 import cn.codegg.tekton.v1.V1RunParam;
 import cn.codegg.tekton.v1.V1WorkspaceBinding;
 
@@ -45,7 +45,7 @@ public class V1TaskRunSpec {
     private String timeout;
 
     @ApiModelProperty(value = "PodTemplate 保存 pod 特定的配置",position = 9)
-    private V1PodTemplate podTemplate;
+    private PodTemplate podTemplate;
 
     @ApiModelProperty(value = "task 中使用的  workspace列表", position = 10)
     private List<V1WorkspaceBinding> workspaces;

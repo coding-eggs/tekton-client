@@ -19,6 +19,6 @@ public class V1Beta1PipelineDeclaredResource {
     private String type;
 
     @ApiModelProperty(value = "optional", position = 2)
-    private Boolean optional;
+    private boolean optional;
 
 }

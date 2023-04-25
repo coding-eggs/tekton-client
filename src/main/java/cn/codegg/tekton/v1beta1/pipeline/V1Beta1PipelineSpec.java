@@ -27,7 +27,7 @@ public class V1Beta1PipelineSpec {
     private List<V1Beta1PipelineTask> tasks;
 
     @ApiModelProperty(value = "声明了运行此pipeline时必须提供的输入参数列表", position = 3)
-    private List<V1Beta1ParamSpec<?>> params;
+    private List<V1Beta1ParamSpec> params;
 
     @ApiModelProperty(value = "声明了一组命名的工作空间，这些工作空间预计将由 PipelineRun 提供", position = 4)
     private List<V1Beta1PipelineWorkspaceDeclaration> workspaces;

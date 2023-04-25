@@ -1,18 +1,13 @@
-package cn.codegg.tekton.common;
-
+package cn.codegg.tekton.v1alpha1;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class Param {
-
-    private String name;
-
-    private ParamValue value;
+public class V1Alpha1VerificationPolicy {
 }

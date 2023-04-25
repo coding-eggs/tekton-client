@@ -25,5 +25,5 @@ public class V1Beta1ResourceDeclaration {
     private String targetPath;
 
     @ApiModelProperty(value = "是否可选", position = 4)
-    private Boolean optional;
+    private boolean optional;
 }

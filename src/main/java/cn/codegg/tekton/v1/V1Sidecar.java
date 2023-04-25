@@ -75,14 +75,14 @@ public class V1Sidecar {
     private V1SecurityContext securityContext;
 
     @ApiModelProperty(value = "此 Sidecar 是否应在容器运行时中为 stdin 分配缓冲区" , notes = "如果未设置，从 Sidecar 中的标准输入读取将始终导致 EOF。默认为 false" ,position = 19)
-    private Boolean stdin;
+    private boolean stdin;
 
     @ApiModelProperty(value = "容器运行时是否应在单个附加打开标准输入通道后关闭它", notes = "当 stdin 为 true 时，stdin 流将在多个附加会话中保持打开状态。如果 stdinOnce 设置为 true，则 stdin 在 Sidecar 启动时打开，为空直到第一个客户端连接到 stdin，然后保持打开并接受数据直到客户端断开连接，此时 stdin 关闭并保持关闭直到 Sidecar 重新启动." +
             "如果此标志为 false，则从标准输入读取的容器进程将永远不会收到 EOF。默认为 false" ,position = 20)
-    private Boolean stdinOnce;
+    private boolean stdinOnce;
 
     @ApiModelProperty(value = "sidecar是否也为自己分配个 TTY ，默认false" ,position = 21)
-    private Boolean tty;
+    private boolean tty;
 
     @ApiModelProperty(value = "sidecar 执行脚本" ,position = 22)
     private String script;

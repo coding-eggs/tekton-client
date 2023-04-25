@@ -1,4 +1,4 @@
-package cn.codegg.tekton.v1;
+package cn.codegg.tekton.common;
 
 
 import io.kubernetes.client.openapi.models.*;
@@ -15,7 +15,10 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1PodTemplate {
+public class PodTemplate {
+
+    @ApiModelProperty(value = "环境变量列表" ,position = 0)
+    private List<V1EnvVar> env;
 
     @ApiModelProperty(value = "node 选择器", position = 0)
     private Map<String, String> nodeSelector;
@@ -36,7 +39,7 @@ public class V1PodTemplate {
     private String runtimeClassName;
 
     @ApiModelProperty(value = "确定 Tekton 是否自动为容器内 Pod 在预定义路径中使用的服务帐户提供令牌;默认是 true", position = 6)
-    private Boolean automountServiceAccountToken;
+    private boolean automountServiceAccountToken;
 
     @ApiModelProperty(value = "。指定 Pod 的 DNS 策略。合法值为 ClusterFirst、Default 和 None; 默认是ClusterFirst", position = 7)
     private String dnsPolicy;
@@ -45,7 +48,7 @@ public class V1PodTemplate {
     private V1PodDNSConfig dnsConfig;
 
     @ApiModelProperty(value = "确定 Pod 命名空间中的服务是否作为环境变量暴露给 Pod，类似于 Docker 服务链接。默认：true",position = 9)
-    private Boolean enableServiceLinks;
+    private boolean enableServiceLinks;
 
     @ApiModelProperty(value = "指定 Pod 的优先级。允许您有选择地对较低优先级的工作负载启用抢占。", position = 10)
     private String priorityClassName;
@@ -57,7 +60,7 @@ public class V1PodTemplate {
     private List<V1LocalObjectReference> imagePullSecrets;
 
     @ApiModelProperty(value = "确定是否使用主机网络命名空间. 默认： false", position = 13)
-    private Boolean hostNetwork;
+    private boolean hostNetwork;
 
     @ApiModelProperty(value = "将条目添加到 Pod 的 `/etc/hosts` 以提供 Pod 级别的主机名覆盖",position = 14)
     private List<V1HostAlias> hostAliases;

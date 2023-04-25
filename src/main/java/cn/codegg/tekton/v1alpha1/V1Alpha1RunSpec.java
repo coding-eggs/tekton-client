@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1alpha1;
 
+import cn.codegg.tekton.common.Param;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +23,7 @@ public class V1Alpha1RunSpec {
     private V1Alpha1EmbeddedRunSpec spec;
 
     @ApiModelProperty(value = "run 需要的参数", notes = "与task中的param配合使用，这里给task中的param赋值" ,position = 3)
-    private List<V1Alpha1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "定义用户可以提供的任务运行规范状态", position =  4)
     private String status;

@@ -1,13 +1,13 @@
 package cn.codegg.tekton.v1.pipeline;
 
 
+import cn.codegg.tekton.common.PodTemplate;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1.V1PodTemplate;
 import cn.codegg.tekton.v1.V1ResolverRef;
 import cn.codegg.tekton.v1.V1RunParam;
 import cn.codegg.tekton.v1.V1WorkspaceBinding;
@@ -55,7 +55,7 @@ public class V1PipelineRunSpec {
     public static class PipelineTaskRunTemplate {
 
         @ApiModelProperty(value = "podTemplate", position = 0)
-        private V1PodTemplate podTemplate;
+        private PodTemplate podTemplate;
 
         @ApiModelProperty(value = "service account", position = 1)
         private String serviceAccountName;

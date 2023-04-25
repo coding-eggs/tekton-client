@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1alpha1;
 
+import cn.codegg.tekton.common.Param;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +19,7 @@ public class V1Alpha1ResolverRef {
     private String resolverName;
 
     @ApiModelProperty(value = "远程pipeline参数", position = 1)
-    private List<V1Alpha1RunParam<?>> params;
+    private List<Param> params;
 
 
 }

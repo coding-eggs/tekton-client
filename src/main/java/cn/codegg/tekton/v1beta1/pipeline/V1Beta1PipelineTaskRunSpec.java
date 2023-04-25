@@ -1,7 +1,7 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
+import cn.codegg.tekton.common.PodTemplate;
 import cn.codegg.tekton.v1beta1.V1Beta1Override;
-import cn.codegg.tekton.v1beta1.V1Beta1PodTemplate;
 import io.kubernetes.client.openapi.models.V1ResourceRequirements;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -24,7 +24,7 @@ public class V1Beta1PipelineTaskRunSpec {
     private String taskServiceAccountName;
 
     @ApiModelProperty(value = "podTemplate" ,position = 2)
-    private V1Beta1PodTemplate taskPodTemplate;
+    private PodTemplate taskPodTemplate;
 
     @ApiModelProperty(value = "覆盖以应用于此 TaskRun 中的步骤。如果在 Step 和 StepOverride 中都指定了字段，则将使用 StepOverride 中的值。仅当启用 alpha 功能门时才支持此字段", position = 3)
     private List<V1Beta1Override> stepOverrides;

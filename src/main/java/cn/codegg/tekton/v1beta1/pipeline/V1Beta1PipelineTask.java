@@ -64,7 +64,7 @@ public class V1Beta1PipelineTask {
         private V1Beta1PipelineTaskMetadata metadata;
 
         @ApiModelProperty(value = "task 参数列表", position = 2)
-        private List<V1Beta1ParamSpec<?>> params;
+        private List<V1Beta1ParamSpec> params;
 
         @ApiModelProperty(value = "任务描述", position = 3)
         private String description;

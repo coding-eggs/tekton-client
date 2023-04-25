@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 public class V1Alpha1EventListener {
 
     @ApiModelProperty(value = "apiVersion", position = 0)
-    private String apiVersion;
+    private String apiVersion = "triggers.tekton.dev/v1alpha1";
 
     @ApiModelProperty(value = "kind", position = 1)
-    private String kind;
+    private String kind = "EventListener";
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

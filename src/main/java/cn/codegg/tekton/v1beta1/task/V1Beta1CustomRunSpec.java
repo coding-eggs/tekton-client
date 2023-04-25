@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1beta1.task;
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.v1beta1.V1Beta1RunParam;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ public class V1Beta1CustomRunSpec {
     private V1Beta1EmbeddedCustomRunSpec customSpec;
 
     @ApiModelProperty(value = "custom run 需要的参数", notes = "与task中的param配合使用，这里给task中的param赋值" ,position = 2)
-    private List<V1Beta1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "定义用户可以提供的任务运行规范状态", position = 3)
     private String status;

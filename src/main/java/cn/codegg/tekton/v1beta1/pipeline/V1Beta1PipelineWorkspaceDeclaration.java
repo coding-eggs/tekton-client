@@ -20,6 +20,6 @@ public class V1Beta1PipelineWorkspaceDeclaration {
     private String description;
 
     @ApiModelProperty(value = "optional", position = 2)
-    private Boolean optional;
+    private boolean optional;
 
 }

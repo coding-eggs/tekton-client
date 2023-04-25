@@ -18,10 +18,10 @@ import lombok.NoArgsConstructor;
 public class V1Beta1ClusterTask {
 
     @ApiModelProperty(value = "apiVersion",notes = "tekton.dev/v1beta1", example = "tekton.dev/v1beta1",position = 0)
-    private String apiVersion;
+    private String apiVersion = "tekton.dev/v1beta1";
 
     @ApiModelProperty(value = "kind",notes = "ClusterTask", example = "ClusterTask",position = 1)
-    private String kind;
+    private String kind = "ClusterTask";
 
     @ApiModelProperty(value = "metadata",notes = "kubernetes 对象 metadata",position = 2)
     private V1ObjectMeta metadata;

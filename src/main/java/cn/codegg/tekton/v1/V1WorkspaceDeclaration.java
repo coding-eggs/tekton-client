@@ -23,9 +23,9 @@ public class V1WorkspaceDeclaration {
     private String mountPath;
 
     @ApiModelProperty(value = "是否只读" ,position = 4)
-    private Boolean readOnly;
+    private boolean readOnly;
 
     @ApiModelProperty(value = "Optional 将工作区标记为在 TaskRuns 中不需要。默认情况下，此字段为 false，因此需要声明的工作空间。" ,position = 5)
-    private Boolean optional;
+    private boolean optional;
 
 }

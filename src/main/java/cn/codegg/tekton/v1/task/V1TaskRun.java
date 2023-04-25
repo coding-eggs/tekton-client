@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 public class V1TaskRun {
 
     @ApiModelProperty(value = "apiVersion", notes = "tekton.dev/v1", example = "tekton.dev/v1beta1",position = 0)
-    private String apiVersion;
+    private String apiVersion = "tekton.dev/v1";
 
     @ApiModelProperty(value = "kind" ,example = "TaskRun",position = 1)
-    private String kind;
+    private String kind = "TaskRun";
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

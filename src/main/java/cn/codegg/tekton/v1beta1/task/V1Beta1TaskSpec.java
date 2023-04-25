@@ -21,7 +21,10 @@ public class V1Beta1TaskSpec {
     private V1Beta1TaskResources resources;
 
     @ApiModelProperty(value = "params 参数", notes = "task 所需要的入参，参数必须作为 TaskRuns 中的输入提供，除非它们声明了默认值", position = 1)
-    private List<V1Beta1ParamSpec<?>> params;
+    private List<V1Beta1ParamSpec> params;
+
+    @ApiModelProperty(value = "DisplayName是可用于填充UI的任务的面向用户的名称", position = 2)
+    private String displayName;
 
     @ApiModelProperty(value = "描述task的功能" ,position = 2)
     private String description;

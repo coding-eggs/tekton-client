@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1beta1;
 
 
+import cn.codegg.tekton.common.ParamValue;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Builder
 @Data
-public class V1Beta1ParamSpec<T> {
+public class V1Beta1ParamSpec {
 
 
 
@@ -28,7 +29,7 @@ public class V1Beta1ParamSpec<T> {
 
     @ApiModelProperty(value = "默认值" ,position = 3)
     @SerializedName("default")
-    private T defaultValue;
+    private ParamValue defaultValue;
 
     @ApiModelProperty(value = "参数类型描述 JSON Schema 属性" ,position = 4)
     private Map<String,String> properties;
