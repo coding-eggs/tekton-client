@@ -15,21 +15,19 @@ import java.util.List;
 @AllArgsConstructor
 public class V1Alpha1EventListenerSpec {
 
+    @ApiModelProperty(value = "serviceAccountName", position = 0)
     private String serviceAccountName;
 
+    @ApiModelProperty(value = "trigger 列表", position = 1)
     private List<V1Alpha1EventListenerTrigger> triggers;
 
-    private List<V1Alpha1EventListenerTriggerGroup> triggerGroups;
-
+    @ApiModelProperty(value = "命名空间选择器", position = 3)
     private V1Alpha1NamespaceSelector namespaceSelector;
 
+    @ApiModelProperty(value = "标签选择器", position = 4)
     private V1LabelSelector labelSelector;
 
     @ApiModelProperty(value = "resources", position = 5)
     private V1Alpha1Resources resources;
-
-    @ApiModelProperty(value = "cloudEventURI", position = 6)
-    private String cloudEventURI;
-
 
 }

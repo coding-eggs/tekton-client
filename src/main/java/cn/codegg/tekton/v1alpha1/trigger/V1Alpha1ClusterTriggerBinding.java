@@ -1,6 +1,5 @@
 package cn.codegg.tekton.v1alpha1.trigger;
 
-import cn.codegg.tekton.v1beta1.trigger.V1Beta1TriggerBindingSpec;
 import io.kubernetes.client.openapi.models.V1ObjectMeta;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

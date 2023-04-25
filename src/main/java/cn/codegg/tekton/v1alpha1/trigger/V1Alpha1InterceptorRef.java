@@ -16,7 +16,7 @@ public class V1Alpha1InterceptorRef {
     @ApiModelProperty(value = "name", position = 0)
     private String name;
 
-    @ApiModelProperty(value = "kind", notes = "InterceptorKind 表示拦截器的类型，命名空间或集群范围。目前只有ClusterInterceptor，所以唯一有效的值是默认值", position = 1)
+    @ApiModelProperty(value = "kind", notes = "InterceptorKind 表示拦截器的类型，命名空间或集群范围。ClusterInterceptor ;NamespacedInterceptor ", position = 1)
     private String kind;
 
     @ApiModelProperty(value = "apiVersion", position = 2)

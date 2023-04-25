@@ -1,8 +1,5 @@
 package cn.codegg.tekton.v1alpha1.trigger;
 
-import cn.codegg.tekton.v1beta1.trigger.V1Beta1InterceptorParams;
-import cn.codegg.tekton.v1beta1.trigger.V1Beta1InterceptorRef;
-import cn.codegg.tekton.v1beta1.trigger.V1Beta1WebhookInterceptor;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,5 +26,16 @@ public class V1Alpha1TriggerInterceptor {
     @ApiModelProperty(value = "Webhook Interceptor 是指一种老式的 webhook 拦截器服务", position = 3)
     private V1Alpha1WebhookInterceptor webhook;
 
+    @ApiModelProperty(value = "github webhook 拦截器", position = 4)
+    private V1Alpha1GitHubInterceptor github;
+
+    @ApiModelProperty(value = "gitlab webhook 拦截器",position = 5)
+    private V1Alpha1GitLabInterceptor gitlab;
+
+    @ApiModelProperty(value = "cel webhook 拦截器", position = 6)
+    private V1Alpha1CELInterceptor cel;
+
+    @ApiModelProperty(value = "bitbucket webhook 拦截器", position = 7)
+    private V1Alpha1BitbucketInterceptor bitbucket;
 
 }

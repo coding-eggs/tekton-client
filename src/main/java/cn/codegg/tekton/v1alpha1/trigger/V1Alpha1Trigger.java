@@ -7,11 +7,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class V1Alpha1EventListener {
+@Data
+public class V1Alpha1Trigger {
 
     @ApiModelProperty(value = "apiVersion", position = 0)
     private String apiVersion;
@@ -23,9 +23,7 @@ public class V1Alpha1EventListener {
     private V1ObjectMeta metadata;
 
     @ApiModelProperty(value = "spec", position = 3)
-    private V1Alpha1EventListenerSpec spec;
+    private V1Alpha1TriggerSpec spec;
 
-    @ApiModelProperty(value = "status", position = 4)
-    private Object status;
 
 }
