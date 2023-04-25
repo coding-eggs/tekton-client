@@ -1,15 +1,15 @@
 package cn.codegg.tekton.v1.task;
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.PodTemplate;
+import cn.codegg.tekton.v1.V1Override;
+import cn.codegg.tekton.v1.V1WorkspaceBinding;
 import io.kubernetes.client.openapi.models.V1ResourceRequirements;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1.V1Override;
-import cn.codegg.tekton.v1.V1RunParam;
-import cn.codegg.tekton.v1.V1WorkspaceBinding;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class V1TaskRunSpec {
     private TaskRunDebug debug;
 
     @ApiModelProperty(value = "taskrun 需要的参数", notes = "与task中的param配合使用，这里给task中的param赋值" ,position = 1)
-    private List<V1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "service account",position = 3)
     private String serviceAccountName;

@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.v1beta1.*;
 import io.kubernetes.client.openapi.models.V1Volume;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,7 +30,7 @@ public class V1Beta1PipelineTask {
     private EmbeddedTask taskSpec;
 
     @ApiModelProperty(value = "任务需要为 true 的 when 表达式列表", position = 3)
-    private V1Beta1WhenExpressions<?> when;
+    private V1Beta1WhenExpression when;
 
     @ApiModelProperty(value = "重试次数", position = 4)
     private Integer retries;
@@ -38,10 +39,10 @@ public class V1Beta1PipelineTask {
     private List<String> runAfter;
 
     @ApiModelProperty(value = "声明传递给此任务的参数" , position = 6)
-    private List<V1Beta1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "声明任务展开的参数", position = 7)
-    private List<V1Beta1RunParam<?>> matrix;
+    private List<Param> matrix;
 
     @ApiModelProperty(value = "WorkspacePipelineTaskBinding 描述了传递到管道的workspace应如何映射到任务声明的workspace。", position = 8)
     private List<WorkspacePipelineTaskBinding> workspaces;

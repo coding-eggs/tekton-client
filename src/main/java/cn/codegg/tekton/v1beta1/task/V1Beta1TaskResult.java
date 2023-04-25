@@ -18,7 +18,7 @@ public class V1Beta1TaskResult {
     private String name;
 
     @ApiModelProperty(value = "type", notes = "string 后续可能会支持数组 array" ,position = 1)
-    private String  type;
+    private String type;
 
     @ApiModelProperty(value = "Properties 是支持键值对结果的 JSON Schema 属性" ,position = 2)
     private Map<String,String> properties;

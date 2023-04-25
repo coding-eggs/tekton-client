@@ -1,8 +1,8 @@
 package cn.codegg.tekton.v1beta1.task;
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.PodTemplate;
 import cn.codegg.tekton.v1beta1.V1Beta1Override;
-import cn.codegg.tekton.v1beta1.V1Beta1RunParam;
 import cn.codegg.tekton.v1beta1.V1Beta1WorkspaceBinding;
 import io.kubernetes.client.openapi.models.V1ResourceRequirements;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,7 +24,7 @@ public class V1Beta1TaskRunSpec {
     private TaskRunDebug debug;
 
     @ApiModelProperty(value = "taskrun 需要的参数", notes = "与task中的param配合使用，这里给task中的param赋值" ,position = 1)
-    private List<V1Beta1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "TaskRunResources 允许 TaskRun 声明输入和输出 TaskResourceBinding", position = 2)
     private V1Beta1TaskRunResources resources;

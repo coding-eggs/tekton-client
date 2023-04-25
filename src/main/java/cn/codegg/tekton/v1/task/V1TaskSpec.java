@@ -18,7 +18,7 @@ public class V1TaskSpec {
 
 
     @ApiModelProperty(value = "params 参数", notes = "task 所需要的入参，参数必须作为 TaskRuns 中的输入提供，除非它们声明了默认值", position = 1)
-    private List<V1ParamSpec<?>> params;
+    private List<V1ParamSpec> params;
 
     @ApiModelProperty(value = "描述task的功能" ,position = 2)
     private String description;

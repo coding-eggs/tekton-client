@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1;
 
 
+import cn.codegg.tekton.common.Param;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1WhenExpressions<T> {
+public class V1WhenExpressions {
 
 
     @ApiModelProperty(value = "input", notes = "input 是表达式的输入，可以是静态输入或变量（参数或结果）。如果未提供，则默认为空字符串", position = 0)
@@ -21,7 +22,7 @@ public class V1WhenExpressions<T> {
     private String operator;
 
     @ApiModelProperty(value = "value", notes = "string or array ", position = 2)
-    private T values;
+    private Param values;
 
 
 

@@ -1,4 +1,4 @@
-package cn.codegg.tekton.v1alpha1;
+package cn.codegg.tekton.v1alpha1.pipeline;
 
 
 import io.kubernetes.client.openapi.models.V1ObjectMeta;

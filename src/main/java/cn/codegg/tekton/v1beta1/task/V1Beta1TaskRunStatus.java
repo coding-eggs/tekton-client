@@ -1,28 +1,26 @@
 package cn.codegg.tekton.v1beta1.task;
 
+import cn.codegg.tekton.common.Status;
+import cn.codegg.tekton.v1beta1.V1Beta1Provenance;
 import cn.codegg.tekton.v1beta1.V1Beta1SidecarState;
-import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
 import cn.codegg.tekton.v1beta1.pipeline.V1Beta1PipelineResourceResult;
 import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
 import io.kubernetes.client.openapi.models.V1ContainerStateWaiting;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Map;
 
+@EqualsAndHashCode(callSuper = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1TaskRunStatus {
+public class V1Beta1TaskRunStatus extends Status {
 
-    @ApiModelProperty(value = "task run 变更状态", position = 0)
-    private List<V1Beta1StatusCondition> conditions;
 
     @ApiModelProperty(value = "pod 名称", position = 1)
     private String podName;
@@ -36,6 +34,7 @@ public class V1Beta1TaskRunStatus {
     @ApiModelProperty(value = "task step 状态列表",position = 4)
     private List<StepState> steps;
 
+    @Deprecated
     @ApiModelProperty(value = "描述通过 CloudEventResource 请求的每个云事件的状态", position = 5)
     private List<V1Beta1CloudEventDelivery> cloudEvents;
 
@@ -46,7 +45,7 @@ public class V1Beta1TaskRunStatus {
     private List<V1Beta1PipelineResourceResult> resourceResult;
 
     @ApiModelProperty(value = "task container 输出的结果列表", position = 8)
-    private List<V1Beta1TaskRunResult<?>> taskRunResults;
+    private List<V1Beta1TaskRunResult> taskRunResults;
 
     @ApiModelProperty(value = "sidecar 的状态记录", position = 9)
     private List<V1Beta1SidecarState> sidecars;
@@ -54,7 +53,11 @@ public class V1Beta1TaskRunStatus {
     @ApiModelProperty(value = "taskrun 中 task 的 spec", position = 10)
     private V1Beta1TaskSpec taskSpec;
 
+    @ApiModelProperty(value = "（可选）Provence包含一些关于软件工件是如何构建的关键认证元数据（什么源、什么输入/输出等）")
+    private V1Beta1Provenance provenance;
 
+    @ApiModelProperty(value = "SpanContext包含跟踪跨度上下文字段", position = 12)
+    private Map<String, String> spanContext;
 
 
 

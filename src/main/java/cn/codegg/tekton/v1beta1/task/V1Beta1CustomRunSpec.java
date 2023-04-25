@@ -1,13 +1,12 @@
 package cn.codegg.tekton.v1beta1.task;
 
 import cn.codegg.tekton.common.Param;
-import cn.codegg.tekton.v1beta1.V1Beta1RunParam;
+import cn.codegg.tekton.v1beta1.V1Beta1WorkspaceBinding;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1beta1.V1Beta1WorkspaceBinding;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package cn.codegg.tekton.v1beta1.pipeline;
+package cn.codegg.tekton.v1alpha1.pipeline;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1PipelineRunResult<T> {
+public class V1Alpha1RunResult {
 
     @ApiModelProperty(value = "name", position = 0)
     private String name;
 
-    @ApiModelProperty(value = "value", position = 1)
-    private T value;
+    @ApiModelProperty(value = "value", position = 2)
+    private String value;
 
 }

@@ -39,7 +39,7 @@ public class V1TaskRunStatus {
     private List<V1TaskRunStatus> retriesStatus;
 
     @ApiModelProperty(value = "task container 输出的结果列表", position = 6)
-    private List<V1TaskRunResult<?>> results;
+    private List<V1TaskRunResult> results;
 
     @ApiModelProperty(value = "sidecar 的状态记录", position = 7)
     private List<V1SidecarState> sidecars;

@@ -1,16 +1,16 @@
 package cn.codegg.tekton.v1.pipeline;
 
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.PodTemplate;
+import cn.codegg.tekton.v1.V1ResolverRef;
+import cn.codegg.tekton.v1.V1WorkspaceBinding;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1.V1ResolverRef;
-import cn.codegg.tekton.v1.V1RunParam;
-import cn.codegg.tekton.v1.V1WorkspaceBinding;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -29,7 +29,7 @@ public class V1PipelineRunSpec {
     private V1PipelineSpec pipelineSpec;
 
     @ApiModelProperty(value = "pipeline 运行所需参数", position = 3)
-    private List<V1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "定义了用户可以提供的 pipelinerun 规范状态", position = 5)
     private String status;

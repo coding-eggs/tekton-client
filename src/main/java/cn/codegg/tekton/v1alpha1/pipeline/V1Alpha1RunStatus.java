@@ -1,20 +1,18 @@
-package cn.codegg.tekton.v1alpha1;
+package cn.codegg.tekton.v1alpha1.pipeline;
 
+import cn.codegg.tekton.common.Status;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.OffsetDateTime;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Alpha1RunStatus {
-
+public class V1Alpha1RunStatus extends Status {
 
     @ApiModelProperty(value = "run 实际启动时间", position = 1)
     private OffsetDateTime startTime;
@@ -23,7 +21,7 @@ public class V1Alpha1RunStatus {
     private OffsetDateTime completionTime;
 
     @ApiModelProperty(value = "run container 输出的结果列表", position = 3)
-    private List<V1Alpha1RunResult<?>> results;
+    private List<V1Alpha1RunResult> results;
 
     @ApiModelProperty(value = "run 的历史记录", position = 4)
     private List<V1Alpha1RunStatus> retriesStatus;

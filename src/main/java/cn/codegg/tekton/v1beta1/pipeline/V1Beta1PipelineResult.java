@@ -1,5 +1,7 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
+import cn.codegg.tekton.common.Param;
+import cn.codegg.tekton.common.ParamValue;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1Beta1PipelineResult<T> {
+public class V1Beta1PipelineResult {
 
     @ApiModelProperty(value = "name", position = 0)
     private String name;
@@ -22,6 +24,6 @@ public class V1Beta1PipelineResult<T> {
     private String description;
 
     @ApiModelProperty(value = "输出的值", position = 3)
-    private T value;
+    private ParamValue value;
 
 }

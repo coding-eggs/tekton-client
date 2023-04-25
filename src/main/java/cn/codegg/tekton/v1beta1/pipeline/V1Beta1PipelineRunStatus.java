@@ -1,8 +1,9 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
-import cn.codegg.tekton.v1beta1.V1Beta1WhenExpressions;
+import cn.codegg.tekton.v1beta1.V1Beta1WhenExpression;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +29,7 @@ public class V1Beta1PipelineRunStatus {
     private OffsetDateTime completionTime;
 
     @ApiModelProperty(value = "由 pipeline task的容器写出的结果列表", position = 3)
-    private List<V1Beta1PipelineRunResult<?>> pipelineResults;
+    private List<Param> pipelineResults;
 
     @ApiModelProperty(value = "PipelineRunSpec 包含用于实例化运行的确切规范",position = 4)
     private List<V1Beta1PipelineSpec> pipelineSpec;
@@ -58,7 +59,7 @@ public class V1Beta1PipelineRunStatus {
         private String reason;
 
         @ApiModelProperty(value = "when expressions 列表", position = 2)
-        private List<V1Beta1WhenExpressions<?>> whenExpressions;
+        private List<V1Beta1WhenExpression> whenExpressions;
 
     }
 
@@ -75,7 +76,7 @@ public class V1Beta1PipelineRunStatus {
         private String pipelineTaskName;
 
         @ApiModelProperty(value = "when expressions 列表" , position = 2)
-        private List<V1Beta1WhenExpressions<?>> whenExpressions;
+        private List<V1Beta1WhenExpression> whenExpressions;
     }
 }
 

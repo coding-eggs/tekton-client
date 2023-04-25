@@ -1,9 +1,9 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
 
+import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.PodTemplate;
 import cn.codegg.tekton.v1beta1.V1Beta1ResolverRef;
-import cn.codegg.tekton.v1beta1.V1Beta1RunParam;
 import cn.codegg.tekton.v1beta1.V1Beta1WorkspaceBinding;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
@@ -32,7 +32,7 @@ public class V1Beta1PipelineRunSpec {
     private List<V1Beta1PipelineResourceBinding> resources;
 
     @ApiModelProperty(value = "pipeline 运行所需参数", position = 3)
-    private List<V1Beta1RunParam<?>> params;
+    private List<Param> params;
 
     @ApiModelProperty(value = "service account", position = 4)
     private String serviceAccountName;

@@ -1,6 +1,7 @@
-package cn.codegg.tekton.v1alpha1;
+package cn.codegg.tekton.v1alpha1.pipeline;
 
 import cn.codegg.tekton.common.Param;
+import cn.codegg.tekton.common.PodTemplate;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,7 +39,7 @@ public class V1Alpha1RunSpec {
     private String serviceAccountName;
 
     @ApiModelProperty(value = "PodTemplate 保存 pod 特定的配置",position = 9)
-    private V1Alpha1PodTemplate podTemplate;
+    private PodTemplate podTemplate;
 
     @ApiModelProperty(value = "超时时间", example = "120s",position = 8)
     private String timeout;

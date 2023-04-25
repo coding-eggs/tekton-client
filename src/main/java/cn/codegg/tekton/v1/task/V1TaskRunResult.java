@@ -1,5 +1,7 @@
 package cn.codegg.tekton.v1.task;
 
+import cn.codegg.tekton.common.Param;
+import cn.codegg.tekton.common.ParamValue;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1TaskRunResult<T> {
+public class V1TaskRunResult {
 
     @ApiModelProperty(value = "name", position = 0)
     private String name;
@@ -19,6 +21,6 @@ public class V1TaskRunResult<T> {
     private String type;
 
     @ApiModelProperty(value = "value", position = 2)
-    private T value;
+    private ParamValue value;
 
 }

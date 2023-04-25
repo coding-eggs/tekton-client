@@ -33,7 +33,7 @@ public class V1Beta1PipelineSpec {
     private List<V1Beta1PipelineWorkspaceDeclaration> workspaces;
 
     @ApiModelProperty(value = "pipeline 输出列表", position = 5)
-    private List<V1Beta1PipelineResult<?>> results;
+    private List<V1Beta1PipelineResult> results;
 
     @ApiModelProperty(value = "pipeline结束后运行的任务列表", position = 6)
     @SerializedName("finally")

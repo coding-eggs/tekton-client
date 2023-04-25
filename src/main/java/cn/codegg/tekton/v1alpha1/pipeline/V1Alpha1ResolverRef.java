@@ -1,4 +1,4 @@
-package cn.codegg.tekton.v1alpha1;
+package cn.codegg.tekton.v1alpha1.pipeline;
 
 import cn.codegg.tekton.common.Param;
 import io.swagger.annotations.ApiModelProperty;
