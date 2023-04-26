@@ -17,6 +17,7 @@ import java.util.List;
 @Data
 public class V1Beta1TaskSpec {
 
+    @Deprecated
     @ApiModelProperty(value = "Resources 是运行 task 的输入和输出资源资源的列表在 TaskRuns 中表示为与 PipelineResources 实例的绑定。", position = 0)
     private V1Beta1TaskResources resources;
 

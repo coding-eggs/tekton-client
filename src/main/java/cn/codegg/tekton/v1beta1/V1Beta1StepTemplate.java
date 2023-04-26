@@ -15,6 +15,10 @@ import java.util.List;
 @Data
 public class V1Beta1StepTemplate {
 
+    @Deprecated
+    @ApiModelProperty(value = "name", notes = "指定为DNS_LABEL的每个步骤的默认名称。任务中的每个步骤都必须有一个唯一的名称。无法更新",position = 0)
+    private String name;
+
     @ApiModelProperty(value = "镜像" ,position = 0)
     private String image;
 
