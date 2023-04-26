@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1.V1WhenExpressions;
+import cn.codegg.tekton.v1.V1WhenExpression;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -77,7 +77,7 @@ public class V1PipelineRunStatus {
         private String pipelineTaskName;
 
         @ApiModelProperty(value = "when expressions 列表" , position = 2)
-        private List<V1WhenExpressions> whenExpressions;
+        private List<V1WhenExpression> whenExpressions;
     }
 }
 

@@ -17,6 +17,9 @@ import java.util.List;
 @Data
 public class V1PipelineSpec {
 
+    @ApiModelProperty(value = "DisplayName是可用于填充UI的pipeline的面向用户的名称。", position = 0)
+    private String displayName;
+
     @ApiModelProperty(value = "pipeline 描述", position = 0)
     private String description;
 

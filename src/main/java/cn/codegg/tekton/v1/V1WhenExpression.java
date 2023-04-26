@@ -8,21 +8,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class V1WhenExpressions {
+public class V1WhenExpression {
 
 
     @ApiModelProperty(value = "input", notes = "input 是表达式的输入，可以是静态输入或变量（参数或结果）。如果未提供，则默认为空字符串", position = 0)
     private String input;
 
-    @ApiModelProperty(value = "操作符",notes = "in , notin", position = 1)
+    @ApiModelProperty(value = "操作符",notes = "in EnumOperator.class ", position = 1)
     private String operator;
 
     @ApiModelProperty(value = "value", notes = "string or array ", position = 2)
-    private Param values;
+    private List<String> values;
 
 
 
