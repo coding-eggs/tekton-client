@@ -51,10 +51,10 @@ public class V1TaskRunSpec {
     private List<V1WorkspaceBinding> workspaces;
 
     @ApiModelProperty(value = "覆盖以应用于此 TaskRun 中的步骤", position = 11)
-    private List<V1Override> stepOverrides;
+    private List<V1Override> stepSpecs;
 
     @ApiModelProperty(value = "覆盖以应用于此 TaskRun 中的 Sidecar", position = 12)
-    private List<V1Override> sidecarOverrides;
+    private List<V1Override> sidecarSpecs;
 
     @ApiModelProperty(value = "taskrun 的资源配额", position = 13)
     private V1ResourceRequirements computeResources;

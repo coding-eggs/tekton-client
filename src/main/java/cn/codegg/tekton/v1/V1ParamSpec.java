@@ -1,7 +1,6 @@
 package cn.codegg.tekton.v1;
 
 
-import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.ParamValue;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;

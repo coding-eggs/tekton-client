@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RawExtension {
 
-    private byte[] Raw;
+    private byte[] raw;
 
-    private JsonObject Object;
+    private JsonObject object;
 
 }

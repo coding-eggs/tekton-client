@@ -14,27 +14,27 @@ import lombok.NoArgsConstructor;
 public class URL {
 
     @ApiModelProperty(value = "scheme", position = 0)
-    private String Scheme;
+    private String scheme;
     @ApiModelProperty(value = "加密数据", position = 1)
-    private String Opaque;
+    private String opaque;
     @ApiModelProperty(value = "用户信息，包括username;password",position = 2)
-    private Userinfo User;
+    private Userinfo user;
     @ApiModelProperty(value = "host or host:port", position = 3)
-    private String Host;
+    private String host;
     @ApiModelProperty(value = "路径（相对路径可以省略前导斜杠）", position = 4)
-    private String Path;
+    private String path;
     @ApiModelProperty(value = "u.Path 的转义形式", position = 5)
-    private String RawPath;
+    private String rawPath;
     @ApiModelProperty(value = "不发出空主机", position = 6)
-    private boolean OmitHost;
+    private boolean omitHost;
     @ApiModelProperty(value = "即使 RawQuery 为空，也追加一个查询 ('?')", position = 7)
-    private boolean ForceQuery;
+    private boolean forceQuery;
     @ApiModelProperty(value = "加密查询值，不带？", position = 8)
-    private String RawQuery;
+    private String rawQuery;
     @ApiModelProperty(value = "参考片段，不带 #", position = 9)
-    private String Fragment;
+    private String fragment;
     @ApiModelProperty(value = "EscapedFragment 返回 u.Fragment 的转义形", position = 10)
-    private String RawFragment;
+    private String rawFragment;
 
 
     @Builder

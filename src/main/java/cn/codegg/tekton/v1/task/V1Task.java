@@ -26,5 +26,4 @@ public class V1Task {
     @ApiModelProperty(value = "spec",notes = "task 的 详细设置参数等",position = 3)
     private V1TaskSpec spec;
 
-
 }

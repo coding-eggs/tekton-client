@@ -27,10 +27,10 @@ public class V1PipelineTaskRunSpec {
     private PodTemplate podTemplate;
 
     @ApiModelProperty(value = "覆盖以应用于此 TaskRun 中的步骤。如果在 Step 和 StepOverride 中都指定了字段，则将使用 StepOverride 中的值。仅当启用 alpha 功能门时才支持此字段", position = 3)
-    private List<V1Override> stepOverrides;
+    private List<V1Override> stepSpecs;
 
     @ApiModelProperty(value = "覆盖以应用于此 TaskRun 中的 Sidecar。如果在 Sidecar 和 SidecarOverride 中都指定了一个字段，则将使用 SidecarOverride 中的值。仅当启用 alpha 功能门时才支持此字段", position = 4)
-    private List<V1Override> sidecarOverrides;
+    private List<V1Override> sidecarSpecs;
 
     @ApiModelProperty(value = "metadata", position = 5)
     private V1PipelineTaskMetadata metadata;

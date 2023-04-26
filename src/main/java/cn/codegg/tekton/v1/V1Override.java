@@ -18,6 +18,6 @@ public class V1Override {
     private String name;
 
     @ApiModelProperty(value = "资源配额", position = 1)
-    private V1ResourceRequirements resources;
+    private V1ResourceRequirements computeResources;
 
 }

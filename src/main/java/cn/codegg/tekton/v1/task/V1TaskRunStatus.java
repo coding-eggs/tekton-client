@@ -1,6 +1,8 @@
 package cn.codegg.tekton.v1.task;
 
-import cn.codegg.tekton.v1.V1StatusCondition;
+import cn.codegg.tekton.common.Condition;
+import cn.codegg.tekton.v1.V1Provenance;
+import cn.codegg.tekton.v1.V1SidecarState;
 import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
 import io.kubernetes.client.openapi.models.V1ContainerStateWaiting;
@@ -9,10 +11,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import cn.codegg.tekton.v1.V1SidecarState;
 
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Builder
 @NoArgsConstructor
@@ -20,8 +22,17 @@ import java.util.List;
 @Data
 public class V1TaskRunStatus {
 
-    @ApiModelProperty(value = "task 变更状态", position = 0)
-    private List<V1StatusCondition> conditions;
+    @ApiModelProperty(value = "observedGeneration")
+    private long observedGeneration;
+
+    @ApiModelProperty(value = "conditions", notes = "对资源当前状态的最新可用观测值")
+    private List<Condition> conditions;
+
+    @ApiModelProperty(value = "annotations", notes = "//批注是资源的附加状态字段，用于保存" +
+            "//附加状态以及向用户传达更多信息。这是" +
+            "//大致类似于任何k8s资源上的注释，只是协调器在传达" +
+            "//向外提供更丰富的信息")
+    private Map<String, String> annotations;
 
     @ApiModelProperty(value = "pod 名称", position = 1)
     private String podName;
@@ -46,6 +57,12 @@ public class V1TaskRunStatus {
 
     @ApiModelProperty(value = "taskrun 中 task 的 spec", position = 8)
     private V1TaskSpec taskSpec;
+
+    @ApiModelProperty(value = "Provence包含一些关于软件工件是如何构建的关键认证元数据（什么源、什么输入/输出等）", position = 9)
+    private V1Provenance provenance;
+
+    @ApiModelProperty(value = "SpanContext包含跟踪跨度上下文字段", position = 10)
+    private Map<String, String> spanContext;
 
 
 

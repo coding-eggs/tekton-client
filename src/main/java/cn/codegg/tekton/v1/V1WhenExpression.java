@@ -23,7 +23,7 @@ public class V1WhenExpression {
     @ApiModelProperty(value = "操作符",notes = "in EnumOperator.class ", position = 1)
     private String operator;
 
-    @ApiModelProperty(value = "value", notes = "string or array ", position = 2)
+    @ApiModelProperty(value = "value", notes = "字符串数组 ", position = 2)
     private List<String> values;
 
 
