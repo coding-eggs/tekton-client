@@ -26,6 +26,6 @@ public class V1Beta1EventListener {
     private V1Beta1EventListenerSpec spec;
 
     @ApiModelProperty(value = "status", position = 4)
-    private Object status;
+    private V1Beta1EventListenerStatus status;
 
 }
