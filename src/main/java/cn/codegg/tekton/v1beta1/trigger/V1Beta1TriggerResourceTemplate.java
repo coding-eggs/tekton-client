@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1beta1.trigger;
 
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,6 @@ import lombok.NoArgsConstructor;
 public class V1Beta1TriggerResourceTemplate {
 
     @ApiModelProperty(value = "RawExtension", position = 0)
-    private Object RawExtension;
+    private Runtime.RawExtension RawExtension;
 
 }

@@ -1,6 +1,5 @@
 package cn.codegg.tekton.v1alpha1.trigger;
 
-import cn.codegg.tekton.v1beta1.trigger.V1Beta1TriggerInterceptor;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
