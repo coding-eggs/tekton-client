@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.OffsetDateTime;
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,7 +31,7 @@ public class V1Beta1CloudEventDelivery {
         private String condition;
 
         @ApiModelProperty(value = "最后一次发送时间" , position = 1)
-        private String sentAt;
+        private OffsetDateTime sentAt;
 
         @ApiModelProperty(value = "错误的文本", position = 2)
         private String message;

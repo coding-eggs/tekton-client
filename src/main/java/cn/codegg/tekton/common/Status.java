@@ -1,5 +1,6 @@
 package cn.codegg.tekton.common;
 
+import io.kubernetes.client.openapi.models.V1Condition;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +20,7 @@ public class Status {
     private long observedGeneration;
 
     @ApiModelProperty(value = "conditions", notes = "对资源当前状态的最新可用观测值")
-    private List<Condition> conditions;
+    private List<V1Condition> conditions;
 
     @ApiModelProperty(value = "annotations", notes = "//批注是资源的附加状态字段，用于保存" +
             "//附加状态以及向用户传达更多信息。这是" +

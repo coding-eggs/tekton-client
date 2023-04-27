@@ -17,9 +17,13 @@ import java.util.List;
 @Data
 public class V1Beta1PipelineSpec {
 
+    @ApiModelProperty(value = "ui展示名称", position = 0)
+    private String displayName;
+
     @ApiModelProperty(value = "pipeline 描述", position = 0)
     private String description;
 
+    @Deprecated
     @ApiModelProperty(value = "Resources 将分配给 Pipeline task 的资源的名称和类型声明为输入和输出。", position = 1)
     private List<V1Beta1PipelineDeclaredResource> resources;
 

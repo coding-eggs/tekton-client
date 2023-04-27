@@ -28,6 +28,7 @@ public class V1Beta1PipelineRunSpec {
     @ApiModelProperty(value = "使用自定义pipeline配置", position = 1 )
     private V1Beta1PipelineSpec pipelineSpec;
 
+    @Deprecated
     @ApiModelProperty(value = "Resources 是一个绑定列表，指定 PipelineResources 的哪些实际实例用于 Pipeline 已声明它需要的资源", position = 2)
     private List<V1Beta1PipelineResourceBinding> resources;
 
@@ -40,8 +41,13 @@ public class V1Beta1PipelineRunSpec {
     @ApiModelProperty(value = "定义了用户可以提供的 pipelinerun 规范状态", position = 5)
     private String status;
 
+    @Deprecated
     @ApiModelProperty(value = "超时时间", position = 6)
     private Timeouts timeouts;
+
+    @Deprecated
+    @ApiModelProperty(value = "超时时间", notes = "不推荐使用：改为使用pipelineRunSpec.Timeouts.Pipeline", position = 6)
+    private String timeout;
 
     @ApiModelProperty(value = "podTemplate",position = 7)
     private PodTemplate podTemplate;
@@ -86,6 +92,10 @@ public class V1Beta1PipelineRunSpec {
 
         @ApiModelProperty(value = "apiVersion", position = 1)
         private String apiVersion;
+
+        @Deprecated
+        @ApiModelProperty(value = "bundle" , notes = "对Tekton Bundle的Bundle url引用。", position = 2)
+        private String bundle;
 
         @ApiModelProperty(value = "ResolverRef 允许在远程位置引用管道，如 git repo。仅当启用 alpha 功能门时才支持此字段", position = 2)
         private V1Beta1ResolverRef v1Beta1ResolverRef;

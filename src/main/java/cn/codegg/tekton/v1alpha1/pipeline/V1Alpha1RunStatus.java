@@ -1,9 +1,12 @@
 package cn.codegg.tekton.v1alpha1.pipeline;
 
 import cn.codegg.tekton.common.Condition;
-import cn.codegg.tekton.common.Status;
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -40,6 +43,6 @@ public class V1Alpha1RunStatus {
     private List<V1Alpha1RunStatus> retriesStatus;
 
     @ApiModelProperty(value = "extraFields", position = 5)
-    private Object extraFields;
+    private Runtime.RawExtension extraFields;
 
 }

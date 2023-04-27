@@ -1,6 +1,7 @@
 package cn.codegg.tekton.v1beta1.task;
 
-import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
+import cn.codegg.tekton.common.Condition;
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +22,7 @@ public class V1Beta1CustomRunStatus {
     private long observedGeneration;
 
     @ApiModelProperty(value = "conditions", position = 1)
-    private List<V1Beta1StatusCondition> conditions;
+    private List<Condition> conditions;
 
     @ApiModelProperty(value = "annotations" , position = 1)
     private Map<String, String> annotations;
@@ -39,6 +40,6 @@ public class V1Beta1CustomRunStatus {
     private List<V1Beta1CustomRunStatus> retriesStatus;
 
     @ApiModelProperty(value = "ExtraFields 包含自定义任务控制器提供的任意字段。", position = 5)
-    private Object extraFields;
+    private Runtime.RawExtension extraFields;
 
 }

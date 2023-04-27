@@ -3,9 +3,10 @@ package cn.codegg.tekton.v1.pipeline;
 
 import cn.codegg.tekton.common.Matrix;
 import cn.codegg.tekton.common.Param;
-import cn.codegg.tekton.common.RawExtension;
+
 import cn.codegg.tekton.v1.*;
 import io.kubernetes.client.openapi.models.V1Volume;
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import cn.codegg.tekton.v1.task.V1TaskRef;
@@ -35,7 +36,7 @@ public class V1PipelineTask {
     private EmbeddedTask taskSpec;
 
     @ApiModelProperty(value = "任务需要为 true 的 when 表达式列表", position = 3)
-    private V1WhenExpression when;
+    private List<V1WhenExpression> when;
 
     @ApiModelProperty(value = "重试次数", position = 4)
     private Integer retries;
@@ -64,7 +65,7 @@ public class V1PipelineTask {
     public static class EmbeddedTask{
 
         @ApiModelProperty(value = "自定义任务的规范", position = 0)
-        private RawExtension spec;
+        private Runtime.RawExtension spec;
 
         @ApiModelProperty(value = "metadata", position = 1)
         private V1PipelineTaskMetadata metadata;

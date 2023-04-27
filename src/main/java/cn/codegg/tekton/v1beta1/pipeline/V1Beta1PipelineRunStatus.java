@@ -2,8 +2,8 @@ package cn.codegg.tekton.v1beta1.pipeline;
 
 
 import cn.codegg.tekton.common.Param;
-import cn.codegg.tekton.v1beta1.V1Beta1StatusCondition;
 import cn.codegg.tekton.v1beta1.V1Beta1WhenExpression;
+import io.kubernetes.client.openapi.models.V1Condition;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Builder
 @NoArgsConstructor
@@ -19,8 +20,18 @@ import java.util.List;
 @Data
 public class V1Beta1PipelineRunStatus {
 
-    @ApiModelProperty(value = "pipeline run 状态变更", position = 0)
-    private List<V1Beta1StatusCondition> conditions;
+    @ApiModelProperty(value = "observedGeneration")
+    private long observedGeneration;
+
+    @ApiModelProperty(value = "conditions", notes = "对资源当前状态的最新可用观测值")
+    private List<V1Condition> conditions;
+
+    @ApiModelProperty(value = "annotations", notes = "//批注是资源的附加状态字段，用于保存" +
+            "//附加状态以及向用户传达更多信息。这是" +
+            "//大致类似于任何k8s资源上的注释，只是协调器在传达" +
+            "//向外提供更丰富的信息")
+    private Map<String, String> annotations;
+
 
     @ApiModelProperty(value = "pipeline run 实际启动时间", position = 1)
     private OffsetDateTime startTime;

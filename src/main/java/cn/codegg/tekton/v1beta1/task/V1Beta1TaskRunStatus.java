@@ -1,7 +1,6 @@
 package cn.codegg.tekton.v1beta1.task;
 
 import cn.codegg.tekton.common.Condition;
-import cn.codegg.tekton.common.Status;
 import cn.codegg.tekton.v1beta1.V1Beta1Provenance;
 import cn.codegg.tekton.v1beta1.V1Beta1SidecarState;
 import cn.codegg.tekton.v1beta1.pipeline.V1Beta1PipelineResourceResult;
@@ -9,7 +8,10 @@ import io.kubernetes.client.openapi.models.V1ContainerStateRunning;
 import io.kubernetes.client.openapi.models.V1ContainerStateTerminated;
 import io.kubernetes.client.openapi.models.V1ContainerStateWaiting;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;

@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1alpha1.pipeline;
 
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +17,6 @@ public class V1Alpha1EmbeddedRunSpec {
     private V1Alpha1PipelineTaskMetadata metadata;
 
     @ApiModelProperty(value = "spec", position = 1)
-    private Object spec;
+    private Runtime.RawExtension spec;
 
 }
