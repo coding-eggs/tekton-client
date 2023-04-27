@@ -17,10 +17,11 @@ import java.util.List;
 @NoArgsConstructor
 public class V1Alpha1GitHubInterceptor {
 
-    @ApiModelProperty(value = "密钥", position = 0)
-    private List<String> eventTypes;
 
     @ApiModelProperty(value = "事件类型", position = 1)
     private V1Alpha1SecretRef secretRef;
+
+    @ApiModelProperty(value = "密钥", position = 2)
+    private List<String> eventTypes;
 
 }

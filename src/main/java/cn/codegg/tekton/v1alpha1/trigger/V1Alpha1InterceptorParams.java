@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1alpha1.trigger;
 
+import com.google.gson.JsonObject;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +17,6 @@ public class V1Alpha1InterceptorParams {
     private String name;
 
     @ApiModelProperty(value = "value", position = 1)
-    private Object value;
+    private JsonObject value;
 
 }

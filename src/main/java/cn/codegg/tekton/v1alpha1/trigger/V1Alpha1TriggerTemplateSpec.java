@@ -1,5 +1,6 @@
 package cn.codegg.tekton.v1alpha1.trigger;
 
+import io.kubernetes.client.proto.Runtime;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +19,6 @@ public class V1Alpha1TriggerTemplateSpec {
     private List<V1Alpha1ParamSpec> params;
 
     @ApiModelProperty(value = "resourcetemplates", position = 1)
-    private List<V1Alpha1TriggerResourceTemplate> resourcetemplates;
+    private List<Runtime.RawExtension> resourcetemplates;
 
 }
