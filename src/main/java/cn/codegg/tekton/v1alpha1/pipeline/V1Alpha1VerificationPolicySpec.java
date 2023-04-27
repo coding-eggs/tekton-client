@@ -16,7 +16,7 @@ import java.util.List;
 public class V1Alpha1VerificationPolicySpec {
 
     @ApiModelProperty(value = "patterns Regex 过滤 resources", position = 0)
-    private List<String> resources;
+    private List<ResourcePattern> resources;
 
     @ApiModelProperty(value = "权威机构定义验证签名的规则", position = 1)
     private List<Authority> authorities;
@@ -25,6 +25,16 @@ public class V1Alpha1VerificationPolicySpec {
     private String modeType;
 
 
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ResourcePattern {
+
+        private String pattern;
+
+    }
 
     @Data
     @Builder

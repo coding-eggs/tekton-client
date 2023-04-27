@@ -21,6 +21,7 @@ public class V1Alpha1TaskRef {
     @ApiModelProperty(value = "apiVersion", position = 2)
     private String apiVersion;
 
+    @Deprecated
     @ApiModelProperty(value = "对 Tekton Bundle 的 Bundle url 引用。", position = 3)
     private String bundle;
 

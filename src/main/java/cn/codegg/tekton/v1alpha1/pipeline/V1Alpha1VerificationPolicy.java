@@ -30,4 +30,8 @@ public class V1Alpha1VerificationPolicy {
     @ApiModelProperty(value = "spec", position = 3)
     private V1Alpha1VerificationPolicySpec spec;
 
+    @Deprecated
+    @ApiModelProperty(value = "status", position = 4)
+    private Object status;
+
 }
