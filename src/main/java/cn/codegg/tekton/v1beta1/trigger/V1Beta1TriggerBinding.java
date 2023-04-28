@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 public class V1Beta1TriggerBinding {
 
     @ApiModelProperty(value = "apiVersion", position = 0)
-    private String apiVersion = "triggers.tekton.dev/v1beta1";
+    private String apiVersion;
 
     @ApiModelProperty(value = "kind", position = 1)
-    private String kind = "TriggerBinding";
+    private String kind;
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

@@ -1,6 +1,5 @@
 package cn.codegg.tekton.v1beta1.pipeline;
 
-import cn.codegg.tekton.common.Param;
 import cn.codegg.tekton.common.ParamValue;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;

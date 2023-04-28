@@ -8,12 +8,12 @@
     <url>https://github.com/coding-eggs/tekton-client</url>
     <groupId>cn.codegg</groupId>
     <artifactId>tekton-client</artifactId>
-    <version>0.40.0</version>
+    <version>v0.47.x-LTS</version>
     <description>tekton version 0.40.0</description>
 
     <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kubernetes.client.java.version>18.0.0</kubernetes.client.java.version>
         <lombok.version>1.18.24</lombok.version>
@@ -83,8 +83,8 @@
                 <version>3.10.1</version>
                 <configuration>
                     <encoding>utf-8</encoding>
-                    <source>18</source>
-                    <target>18</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>

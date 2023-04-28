@@ -1,25 +1,19 @@
 package cn.codegg.tekton.common;
 
-import cn.codegg.tekton.v1.task.V1TaskRef;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import io.kubernetes.client.custom.IntOrString;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
-import org.springframework.util.CollectionUtils;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -84,11 +78,11 @@ public class ParamValue {
             if (nextToken == JsonToken.STRING) {
                 return new ParamValue(jsonReader.nextString());
             }else if (nextToken == JsonToken.BEGIN_OBJECT) {
-                TypeAdapter<Map<String, String>> typeAdapter = new Gson().getAdapter(new TypeToken<>() {});
+                TypeAdapter<Map<String, String>> typeAdapter = new Gson().getAdapter(new TypeToken<Map<String, String>>() {});
                 Map<String, String> result = typeAdapter.read(jsonReader);
                 return new ParamValue(result);
             }else {
-                TypeAdapter<List<String>> typeAdapter = new Gson().getAdapter(new TypeToken<>() {});
+                TypeAdapter<List<String>> typeAdapter = new Gson().getAdapter(new TypeToken<List<String>>() {});
                 List<String> result = typeAdapter.read(jsonReader);
                 return new ParamValue(result);
             }

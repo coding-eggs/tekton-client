@@ -18,10 +18,10 @@ import lombok.NoArgsConstructor;
 public class V1Beta1CustomRun {
 
     @ApiModelProperty(value = "apiVersion", notes = "tekton.dev/v1beta1", example = "tekton.dev/v1beta1",position = 0)
-    private String apiVersion = "tekton.dev/v1beta1";
+    private String apiVersion;
 
     @ApiModelProperty(value = "kind" ,example = "CustomRun",position = 1)
-    private String kind = "CustomRun";
+    private String kind;
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

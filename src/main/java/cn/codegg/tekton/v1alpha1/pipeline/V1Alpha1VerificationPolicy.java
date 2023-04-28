@@ -19,7 +19,7 @@ public class V1Alpha1VerificationPolicy {
 
 
     @ApiModelProperty(value = "apiVersion", position = 0)
-    private String apiVersion = "tekton.dev/v1alpha1";
+    private String apiVersion;
 
     @ApiModelProperty(value = "kind", position = 1)
     private String kind;

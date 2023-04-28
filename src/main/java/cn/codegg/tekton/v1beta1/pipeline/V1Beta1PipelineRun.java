@@ -15,10 +15,10 @@ import lombok.NoArgsConstructor;
 public class V1Beta1PipelineRun {
 
     @ApiModelProperty(value = "apiVersion", example = "tekton.dev/v1", position = 0)
-    private String apiVersion = "tekton.dev/v1beta1";
+    private String apiVersion;
 
     @ApiModelProperty(value = "kind", example = "PipelineRun" ,position = 1)
-    private String kind = "PipelineRun";
+    private String kind;
 
     @ApiModelProperty(value = "metadata", position = 2)
     private V1ObjectMeta metadata;

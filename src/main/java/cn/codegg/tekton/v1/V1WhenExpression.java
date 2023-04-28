@@ -1,7 +1,6 @@
 package cn.codegg.tekton.v1;
 
 
-import cn.codegg.tekton.common.Param;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
